@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finn Lüngen</title>
+  <meta name="description" content="Personal page of Finn Lüngen: education, experience and skills.">
+
+  <style>
+    /* Colors used on the page. Change them here and they change everywhere. */
+    :root {
+      --background: #ffffff;
+      --text: #16181d;
+      --muted: #5f6672;
+      --line: #e3e6ea;
+      --accent: #12596b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Avenir Next", "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    /* The single column that holds all content */
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 88px 24px 96px;
+    }
+
+    /* Top of the page: name on the left, photo on the right */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .photo {
+      width: 128px;
+      height: 128px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3.2rem;
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      margin: 12px 0 0;
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    /* Sections */
+    section { margin-top: 64px; }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    p { margin: 0 0 12px; }
+
+    a { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    /* Education and experience: date on the left, station on the right */
+    .timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .timeline li {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+    }
+
+    .when {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .what {
+      position: relative;
+      padding: 0 0 32px 28px;
+      border-left: 1px solid var(--line);
+    }
+
+    .timeline li:last-child .what { padding-bottom: 0; }
+
+    /* The small dot on the line */
+    .what::before {
+      content: "";
+      position: absolute;
+      left: -4px;
+      top: 10px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .what h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .what p {
+      margin: 2px 0 0;
+      color: var(--muted);
+    }
+
+    /* Skills */
+    .skills {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skills li {
+      padding: 4px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    /* Languages and contact: label on the left, value on the right */
+    .pairs {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      row-gap: 6px;
+    }
+
+    .pairs dt { color: var(--muted); }
+    .pairs dd { margin: 0; }
+
+    /* Phones: stack the columns */
+    @media (max-width: 560px) {
+      main { padding: 56px 20px 72px; }
+      h1 { font-size: 2.4rem; }
+      header { gap: 16px; }
+      .photo { width: 84px; height: 84px; }
+      .timeline li { grid-template-columns: 1fr; }
+      .when { margin-bottom: 6px; }
+      .pairs { grid-template-columns: 110px 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <header>
+      <div>
+        <h1>Finn Lüngen</h1>
+        <p class="lead">Business informatics graduate from Osnabrück</p>
+      </div>
+      
+      <img class="photo" src="photo.jpg" alt="Portrait of Finn Lüngen" width="128" height="128">
+    </header>
+
+    <section>
+      <h2>About me</h2>
+      <p>
+        I have a Bachelor's degree in Wirtschaftsinformatik (business informatics)
+        from Universität Osnabrück. During my studies I worked there as a student
+        research assistant on a VR research project and developed a VR app.
+      </p>
+    </section>
+
+    <section>
+      <h2>Education and experience</h2>
+      <ol class="timeline">
+
+        <li>
+          <div class="when">Since Oct. 2026</div>
+          <div class="what">
+            <h3>M.Sc. Business Intelligence and Process Management</h3>
+            <p>Berlin School of Economics and Law</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when">Feb. to Sep. 2026</div>
+          <div class="what">
+            <h3>Student research assistant (HiWi)</h3>
+            <p>Universität Osnabrück. Worked on an applied VR research project.</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when">2022 to 2026</div>
+          <div class="what">
+            <h3>B.Sc. Wirtschaftsinformatik</h3>
+            <p>Universität Osnabrück</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when">2022</div>
+          <div class="what">
+            <h3>Abitur</h3>
+            <p>Osnabrück</p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>SQL</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <dl class="pairs">
+        <dt>German</dt>
+        <dd>Native</dd>
+        <dt>English</dt>
+        <dd>C1</dd>
+        <dt>Arabic</dt>
+        <dd>Learning</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <dl class="pairs">
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/Finn-Luengen">github.com/Finn-Luengen</a></dd>
+      </dl>
+    </section>
+
+  </main>
+</body>
+</html>
